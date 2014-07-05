@@ -18,11 +18,10 @@
 module.exports = {
    find: function (req, res) {
      var slug = req.param('id');
+
      Article.findOne({
        slug: slug
-      }).done(function(err, art){
-        article = art; 
-
+      }).done(function(err, article){
         return res.render("articles/show", {
           article: article
         });
