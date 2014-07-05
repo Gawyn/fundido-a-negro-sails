@@ -16,15 +16,22 @@
  */
 
 module.exports = {
-    
-  
+   find: function (req, res) {
+     var slug = req.param('id');
+     Article.findOne({
+       slug: slug
+      }).done(function(err, art){
+        article = art; 
 
+        return res.render("articles/show", {
+          article: article
+        });
+      });
+    },
 
   /**
    * Overrides for the settings in `config/controllers.js`
    * (specific to ArticleController)
    */
   _config: {}
-
-  
 };
