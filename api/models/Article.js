@@ -3,7 +3,7 @@ module.exports = {
     title: {
       type: 'string',
       required: true
-    }
+    },
     body: {
       type: 'text',
       required: true
