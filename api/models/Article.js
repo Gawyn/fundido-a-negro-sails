@@ -7,6 +7,11 @@ module.exports = {
     body: {
       type: 'text',
       required: true
+    },
+    slug: {
+      type: 'string',
+      required: true,
+      unique: true
     }
   }
 };
